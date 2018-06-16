@@ -1,12 +1,12 @@
 {
   "name": "gitlab-roadmap",
-  "version": "0.0.1",
+  "version": "0.0.0-development",
   "description": "📢 Create a product roadmap website with GitLab Issue Boards as a backend!",
   "main": "www/bin.js",
   "repository": "Filiosoft/gitlab-roadmap",
   "homepage": "https://filiosoft.org/gitlab-roadmap",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "npm run lint && npm audit || true",
     "start": "node bin/www",
     "dev": "nodemon bin/www",
     "sls": "sls offline start",
@@ -15,7 +15,9 @@
     "lint!": "npm run format && npm run lint:fix",
     "format": "prettier --write 'lib/*.js' 'bin/*.js' 'config/*.js' '*.js'",
     "cm": "git-cz",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "travis-deploy-once": "travis-deploy-once --pro",
+    "semantic-release": "semantic-release"
   },
   "author": "Filiosoft Labs <opensource@filiosoft.com>",
   "license": "MIT",
@@ -43,8 +45,10 @@
     "lint-staged": "^7.2.0",
     "nodemon": "^1.17.5",
     "prettier": "^1.13.5",
+    "semantic-release": "^15.5.4",
     "serverless": "^1.26.1",
-    "serverless-domain-manager": "^2.3.3"
+    "serverless-domain-manager": "^2.3.3",
+    "travis-deploy-once": "^5.0.0"
   },
   "config": {
     "commitizen": {
