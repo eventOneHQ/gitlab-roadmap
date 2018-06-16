@@ -26,6 +26,7 @@
   "license": "MIT",
   "dependencies": {
     "axios": "^0.18.0",
+    "cookie-session": "^2.0.0-beta.3",
     "cors": "^2.8.4",
     "debug": "^3.1.0",
     "dotenv": "^6.0.0",
@@ -33,6 +34,8 @@
     "express-handlebars": "^3.0.0",
     "moment-timezone": "^0.5.17",
     "morgan": "^1.9.0",
+    "passport": "^0.4.0",
+    "passport-gitlab2": "^4.0.0",
     "serverless-http": "^1.5.5",
     "serverless-offline": "^3.25.4"
   },

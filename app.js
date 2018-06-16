@@ -5,6 +5,9 @@ const app = express()
 // setup express app
 require('./config/express')(app)
 
+// setup passport
+require('./config/passport')(app)
+
 app.use('/', require('./routes')())
 
 // setup error handlers

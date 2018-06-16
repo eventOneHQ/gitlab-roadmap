@@ -63,12 +63,26 @@
             </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-
-                </ul>
                 <span class="navbar-text">
                     Last Updated: {{moment project.last_activity_at}}
                 </span>
+                <ul class="navbar-nav ml-auto">
+                    {{#if appEnabled}} {{#if user}}
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            {{user.username}}
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="/auth/logout">Logout</a>
+                        </div>
+                    </li>
+                    {{else}}
+                    <li class="nav-item">
+                        <a class="nav-link" href="/auth/gitlab">Login</a>
+                    </li>
+                    {{/if}} {{/if}}
+                </ul>
             </div>
         </nav>
     </header>

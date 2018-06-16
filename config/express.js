@@ -10,6 +10,7 @@ const axios = require('../config/axios')(internalConfig)
 module.exports = async app => {
   // set config globals
   app.locals.config = config
+  app.locals.appEnabled = internalConfig.gl_app
   try {
     const projectResp = await axios.get('/')
     app.locals.project = projectResp.data

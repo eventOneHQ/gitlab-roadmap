@@ -25,6 +25,28 @@
       "description": "ID of GitLab issue board",
       "required": true
     },
+    "GL_RM_INT_CONFIG_GL_APP": {
+      "description": "Enable login with GitLab?",
+      "value":"false",
+      "required": false
+    },
+    "GL_RM_INT_CONFIG_GL_CLIENT_ID": {
+      "description": "GitLab application client ID",
+      "required": false
+    },
+    "GL_RM_INT_CONFIG_GL_CLIENT_SECRET": {
+      "description": "GitLab application client secret",
+      "required": false
+    },
+    "GL_RM_INT_CONFIG_BASE_URL": {
+      "description": "Base url of the roadmap",
+      "required": false
+    },
+    "GL_RM_INT_CONFIG_COOKIE_SECRET": {
+      "description": "Random secret for cookies",
+      "generator":"secret",
+      "required": false
+    },
     "GL_RM_CONFIG_THEME": {
       "description": "Bootstrap CSS theme",
       "value": "https://bootswatch.com/4/materia/bootstrap.min.css",
