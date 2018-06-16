@@ -1,9 +1,12 @@
 const cors = require('cors')
 const exphbs = require('express-handlebars')
 const moment = require('moment')
+const morgan = require('morgan')
 
 module.exports = app => {
+  app.use(morgan('dev'))
   app.use(cors())
+
   app.engine(
     '.hbs',
     exphbs({
