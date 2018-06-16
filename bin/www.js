@@ -6,7 +6,7 @@
 
 const app = require('../app')
 const http = require('http')
-const debug = require('debug')('http')
+const debug = require('debug')('glrm:http')
 
 /**
  * Get port from environment and store in Express.

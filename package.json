@@ -11,7 +11,7 @@
   "scripts": {
     "test": "npm run lint && npm audit || true",
     "start": "node bin/www",
-    "dev": "DEBUG=http nodemon bin/www",
+    "dev": "DEBUG=glrm:* nodemon bin/www",
     "sls": "sls offline start",
     "lint": "eslint . -f node_modules/eslint-html-reporter/reporter.js -o public/eslint.html",
     "lint:fix": "eslint . --fix",
@@ -31,7 +31,7 @@
     "dotenv": "^6.0.0",
     "express": "^4.16.3",
     "express-handlebars": "^3.0.0",
-    "moment": "^2.22.2",
+    "moment-timezone": "^0.5.17",
     "morgan": "^1.9.0",
     "serverless-http": "^1.5.5",
     "serverless-offline": "^3.25.4"

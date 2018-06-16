@@ -1,6 +1,6 @@
 const express = require('express')
 
-const { internalConfig, config } = require('../config')()
+const { internalConfig } = require('../config')()
 const axios = require('../config/axios')(internalConfig)
 
 const router = express.Router()
@@ -8,15 +8,8 @@ const router = express.Router()
 module.exports = () => {
   router.get('/', async (req, res, next) => {
     try {
-      const resp = await Promise.all([
-        axios.get(`/boards/${internalConfig.board_id}`),
-        axios.get('/')
-      ])
-      const boardResp = resp[0]
-      const projectResp = resp[1]
-
+      const boardResp = await axios.get(`/boards/${internalConfig.board_id}`)
       const lists = boardResp.data.lists
-      const project = projectResp.data
 
       if (boardResp.status !== 200) {
         const err = new Error(
@@ -26,7 +19,7 @@ module.exports = () => {
         return next(err)
       }
 
-      const maps = lists.map(async list => {
+      const listMaps = lists.map(async list => {
         const resp = await axios.get(`/issues?labels=${list.label.name}`)
 
         // filter out confidential issues
@@ -36,14 +29,11 @@ module.exports = () => {
         list.noIssues = list.issues.length < 1
       })
 
-      await Promise.all(maps)
+      await Promise.all(listMaps)
 
-      const sendData = {
-        lists,
-        project,
-        config
-      }
-      return res.render('home', sendData)
+      return res.render('home', {
+        lists
+      })
     } catch (err) {
       return next(err)
     }
