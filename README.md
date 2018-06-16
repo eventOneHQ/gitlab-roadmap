@@ -54,7 +54,7 @@ $ npx sls deploy
 
 ### Development Setup
 
-Want to contribute? Awesome! Follow these steps to get setup.
+Want to contribute? Awesome! First checkout the [contribution guidelines](#contributing) then follow these steps to get setup.
 
 Clone the repository
 
@@ -79,6 +79,10 @@ Start the dev server
 ```
 $ npm run dev
 ```
+
+## Contributing
+
+Please read [CONTRIBUTING.md](https://github.com/Filiosoft/gitlab-roadmap/blob/develop/CONTRIBUTING.md) for details on our [code of conduct](https://github.com/Filiosoft/gitlab-roadmap/blob/develop/CODE_OF_CONDUCT.md), and the process for submitting pull requests to us.
 
 ## Versioning
 
