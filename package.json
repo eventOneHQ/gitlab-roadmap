@@ -2,9 +2,12 @@
   "name": "gitlab-roadmap",
   "version": "0.0.0-development",
   "description": "📢 Create a product roadmap website with GitLab Issue Boards as a backend!",
-  "main": "www/bin.js",
+  "main": "bin/www.js",
   "repository": "Filiosoft/gitlab-roadmap",
   "homepage": "https://filiosoft.org/gitlab-roadmap",
+  "bin": {
+    "gitlab-roadmap": "./bin/www.js"
+  },
   "scripts": {
     "test": "npm run lint && npm audit || true",
     "start": "node bin/www",
@@ -60,6 +63,11 @@
       "npm run lint!",
       "git add"
     ]
+  },
+  "release": {
+    "npmPublish": false,
+    "tarballDir": "dist",
+    "assets": "dist/*.tgz"
   },
   "engines": {
     "node": ">=8"
