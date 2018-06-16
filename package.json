@@ -6,7 +6,7 @@
   "repository": "Filiosoft/gitlab-roadmap",
   "homepage": "https://filiosoft.org/gitlab-roadmap",
   "scripts": {
-    "test": "npm run lint && npm audit",
+    "test": "npm run lint && npm audit || true",
     "start": "node bin/www",
     "dev": "nodemon bin/www",
     "sls": "sls offline start",
