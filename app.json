@@ -27,18 +27,22 @@
     },
     "GL_RM_CONFIG_THEME": {
       "description": "Bootstrap CSS theme",
-      "value": "https://bootswatch.com/4/materia/bootstrap.min.css"
+      "value": "https://bootswatch.com/4/materia/bootstrap.min.css",
+      "required": false
     },
     "GL_RM_CONFIG_LINK": {
       "description": "Navbar brand link",
-      "value": "https://filiosoft.com"
+      "value": "https://filiosoft.com",
+      "required": false
     },
     "GL_RM_CONFIG_NAVBAR_CLASS": {
-      "description": "Navbar coloring classes (e.g. 'navbar-dark bg-dark')"
+      "description": "Navbar coloring classes (e.g. 'navbar-dark bg-dark')",
+      "required": false
     },
     "GL_RM_CONFIG_COPYRIGHT": {
       "description": "Copyright text",
-      "value": "Copyright &copy; 2018 Filiosoft, LLC"
+      "value": "Copyright &copy; 2018 Filiosoft, LLC",
+      "required": false
     }
   }
 }
