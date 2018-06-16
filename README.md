@@ -10,18 +10,22 @@
 </p>
 <p align="center"><b>📢 Create a product roadmap website with GitLab Issue Boards as a backend!</b></p>
 
-## Quick Start
+## Setup
+
+### Quick Start (Heroku)
 
 Click the button below to deploy on Heroku!
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Filiosoft/gitlab-roadmap)
 
-## Install on AWS Lambda
+### Slower Start (AWS Lambda)
 
-Copy `config.example.yml` to `config.yml` and edit it to your liking
+If you want to deploy to AWS Lambda, follow the steps below:
+
+Clone the repository
 
 ```
-$ cp config.example.yml config.yml
+$ git clone https://github.com/Filiosoft/gitlab-roadmap
 ```
 
 Install the dependencies
@@ -30,12 +34,62 @@ Install the dependencies
 $ npm install
 ```
 
-And then run the following:
+Copy `config.example.yml` to `config.yml` and edit it to your liking
+
+```
+$ cp config.example.yml config.yml
+```
+
+Setup the domain (see [here](https://github.com/amplify-education/serverless-domain-manager) for more instructions)
+
+```
+$ npx sls create_domain
+```
+
+And finally, deploy
 
 ```
 $ npx sls deploy
 ```
 
+### Development Setup
+
+Want to contribute? Awesome! Follow these steps to get setup.
+
+Clone the repository
+
+```
+$ git clone https://github.com/Filiosoft/gitlab-roadmap
+```
+
+Install the dependencies
+
+```
+$ npm install
+```
+
+Copy `example.env` to `.env` and edit it to your liking
+
+```
+$ cp example.env .env
+```
+
+Start the dev server
+
+```
+$ npm run dev
+```
+
+## Versioning
+
+We use [semantic-release](https://github.com/semantic-release/semantic-release) for versioning. Every commit to `master` will generate a release. For the versions available, see the [releases on the repositories](https://github.com/Filiosoft/gitlab-roadmap/releases).
+
+## Credits
+
+- **Noah Prail** - _Project Lead_ - [@nprail](https://github.com/nprail)
+
+See also the list of [contributors](https://github.com/Filiosoft/gitlab-roadmap/contributors) who participated in this project.
+
 ## License
 
-[MIT](LICENSE)
+[MIT](https://github.com/Filiosoft/gitlab-roadmap/blob/develop/LICENSE)
