@@ -28,7 +28,11 @@ module.exports = () => {
 
       const maps = lists.map(async list => {
         const resp = await axios.get(`/issues?labels=${list.label.name}`)
-        list.issues = resp.data
+
+        // filter out confidential issues
+        const filtered = resp.data.filter(issue => !issue.confidential)
+
+        list.issues = filtered
         list.noIssues = list.issues.length < 1
       })
 
