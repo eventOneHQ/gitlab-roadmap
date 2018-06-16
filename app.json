@@ -1,0 +1,44 @@
+{
+  "name": "GitLab Roadmap",
+  "description":
+    "📢 Create a product roadmap website with GitLab Issue Boards as a backend!",
+  "keywords": ["gitlab", "roadmap", "product"],
+  "website": "https://filiosoft.org/gitlab-roadmap",
+  "repository": "https://github.com/filiosoft/gitlab-roadmap",
+  "success_url": "/",
+  "env": {
+    "GL_RM_INT_CONFIG_TOKEN": {
+      "description": "GitLab personal access token",
+      "required": true
+    },
+    "GL_RM_INT_CONFIG_URL": {
+      "description": "GitLab instance address",
+      "value": "https://gitlab.com",
+      "required": true
+    },
+    "GL_RM_INT_CONFIG_PROJECT_ID": {
+      "description": "ID of GitLab project with roadmap issue board",
+      "value": "filiosoft/roadmap",
+      "required": true
+    },
+    "GL_RM_INT_CONFIG_BOARD_ID": {
+      "description": "ID of GitLab issue board",
+      "required": true
+    },
+    "GL_RM_CONFIG_THEME": {
+      "description": "Bootstrap CSS theme",
+      "value": "https://bootswatch.com/4/materia/bootstrap.min.css"
+    },
+    "GL_RM_CONFIG_LINK": {
+      "description": "Navbar brand link",
+      "value": "https://filiosoft.com"
+    },
+    "GL_RM_CONFIG_NAVBAR_CLASS": {
+      "description": "Navbar coloring classes (e.g. 'navbar-dark bg-dark')"
+    },
+    "GL_RM_CONFIG_COPYRIGHT": {
+      "description": "Copyright text",
+      "value": "Copyright &copy; 2018 Filiosoft, LLC"
+    }
+  }
+}

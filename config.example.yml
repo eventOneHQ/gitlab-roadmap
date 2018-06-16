@@ -1,0 +1,11 @@
+internal-config:
+  token: gitlab-personal-access-token # gitlab personal access token
+  url: https://gitlab.com # gitlab instance address
+  project-id: filiosoft/roadmap # can be ID or path
+  board-id: 49 # issue board ID
+config:
+  theme: https://bootswatch.com/4/materia/bootstrap.min.css # boostrap theme
+  domain: roadmap.filiosoft.com # domain to deploy to
+  link: https://filiosoft.com # navbar brand link
+  # navbar-class: "navbar-dark bg-dark" # navbar coloring classes
+  copyright: "Copyright &copy; 2018 Filiosoft, LLC" # copyright text

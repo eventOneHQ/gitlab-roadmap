@@ -1,0 +1,34 @@
+service: gitlab-roadmap
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+  stage: production
+
+functions:
+  app:
+    handler: sls.handler
+    environment:
+      GL_RM_INT_CONFIG_TOKEN: ${file(./config.yml):internal-config.token}
+      GL_RM_INT_CONFIG_URL: ${file(./config.yml):internal-config.url}
+      GL_RM_INT_CONFIG_PROJECT_ID: ${file(./config.yml):internal-config.project-id}
+      GL_RM_INT_CONFIG_BOARD_ID: ${file(./config.yml):internal-config.board-id}
+      GL_RM_CONFIG_THEME: ${file(./config.yml):config.theme}
+      GL_RM_CONFIG_DOMAIN: ${file(./config.yml):config.domain}
+      GL_RM_CONFIG_LINK: ${file(./config.yml):config.link}
+      GL_RM_CONFIG_NAVBAR_CLASS: ${file(./config.yml):config.navbar-class}
+      GL_RM_CONFIG_COPYRIGHT: ${file(./config.yml):config.copyright}
+    events:
+      - http: ANY /
+      - http: 'ANY {proxy+}'
+custom:
+  customDomain:
+    domainName: ${file(./config.yml):config.domain}
+    certificateName: ${file(./config.yml):config.domain}
+    basePath: ''
+    stage: ${self:provider.stage}
+    createRoute53Record: true
+
+plugins:
+  - serverless-offline
+  - serverless-domain-manager

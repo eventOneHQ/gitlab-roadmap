@@ -1,0 +1,20 @@
+<div class="row">
+    {{#each lists}}
+    <div class="col-lg-2 col-md-4">
+        <div class="card">
+            <div class="card-header">
+                {{label.name}}
+            </div>
+            <ul class="list-group list-group-flush">
+                {{#each issues}}
+                <a href="{{web_url}}" class="list-group-item list-group-item-action">{{title}}
+                    <small>#{{iid}}</small>
+                </a>
+                {{/each}} {{#if noIssues}}
+                <li class="list-group-item">No Milestones</li>
+                {{/if}}
+            </ul>
+        </div>
+    </div>
+    {{/each}}
+</div>
