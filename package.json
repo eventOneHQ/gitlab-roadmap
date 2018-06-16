@@ -7,6 +7,7 @@
   "homepage": "https://filiosoft.org/gitlab-roadmap",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node bin/www",
     "dev": "nodemon bin/www",
     "sls": "sls offline start",
     "lint": "eslint . -f node_modules/eslint-html-reporter/reporter.js -o public/eslint.html",
