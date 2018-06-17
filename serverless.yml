@@ -13,6 +13,11 @@ functions:
       GL_RM_INT_CONFIG_URL: ${file(./config.yml):internal-config.url}
       GL_RM_INT_CONFIG_PROJECT_ID: ${file(./config.yml):internal-config.project-id}
       GL_RM_INT_CONFIG_BOARD_ID: ${file(./config.yml):internal-config.board-id}
+      GL_RM_INT_CONFIG_GL_APP: ${file(./config.yml):internal-config.gl-app}
+      GL_RM_INT_CONFIG_GL_CLIENT_ID: ${file(./config.yml):internal-config.gl-client-id}
+      GL_RM_INT_CONFIG_GL_CLIENT_SECRET: ${file(./config.yml):internal-config.gl-client-secret}
+      GL_RM_INT_CONFIG_BASE_URL: ${file(./config.yml):internal-config.base-url}
+      GL_RM_INT_CONFIG_COOKIE_SECRET: ${file(./config.yml):internal-config.cookie-secret}
       GL_RM_CONFIG_THEME: ${file(./config.yml):config.theme}
       GL_RM_CONFIG_DOMAIN: ${file(./config.yml):config.domain}
       GL_RM_CONFIG_LINK: ${file(./config.yml):config.link}

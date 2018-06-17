@@ -1,9 +1,28 @@
 const cors = require('cors')
 const exphbs = require('express-handlebars')
 const moment = require('moment')
+const morgan = require('morgan')
+const debug = require('debug')('glrm:express')
 
-module.exports = app => {
+const { internalConfig, config } = require('../config')()
+const axios = require('../config/axios')(internalConfig)
+
+module.exports = async app => {
+  // set config globals
+  app.locals.config = config
+  app.locals.appEnabled = internalConfig.gl_app
+  try {
+    const projectResp = await axios.get('/')
+    app.locals.project = projectResp.data
+  } catch (err) {
+    debug(err)
+  }
+
+  // setup middleware
+  app.use(morgan('dev'))
   app.use(cors())
+
+  // setup view engine
   app.engine(
     '.hbs',
     exphbs({
@@ -11,7 +30,7 @@ module.exports = app => {
       defaultLayout: 'main',
       helpers: {
         moment: input => {
-          return moment(input).format('MMMM Do YYYY, h:mm:ss a')
+          return moment(input).format('MMMM Do YYYY')
         }
       }
     })

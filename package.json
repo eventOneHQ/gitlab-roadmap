@@ -2,13 +2,16 @@
   "name": "gitlab-roadmap",
   "version": "0.0.0-development",
   "description": "📢 Create a product roadmap website with GitLab Issue Boards as a backend!",
-  "main": "www/bin.js",
+  "main": "bin/www.js",
   "repository": "Filiosoft/gitlab-roadmap",
   "homepage": "https://filiosoft.org/gitlab-roadmap",
+  "bin": {
+    "gitlab-roadmap": "./bin/www.js"
+  },
   "scripts": {
     "test": "npm run lint && npm audit || true",
     "start": "node bin/www",
-    "dev": "nodemon bin/www",
+    "dev": "DEBUG=glrm:* nodemon bin/www",
     "sls": "sls offline start",
     "lint": "eslint . -f node_modules/eslint-html-reporter/reporter.js -o public/eslint.html",
     "lint:fix": "eslint . --fix",
@@ -23,11 +26,16 @@
   "license": "MIT",
   "dependencies": {
     "axios": "^0.18.0",
+    "cookie-session": "^2.0.0-beta.3",
     "cors": "^2.8.4",
+    "debug": "^3.1.0",
     "dotenv": "^6.0.0",
     "express": "^4.16.3",
     "express-handlebars": "^3.0.0",
-    "moment": "^2.22.2",
+    "moment-timezone": "^0.5.17",
+    "morgan": "^1.9.0",
+    "passport": "^0.4.0",
+    "passport-gitlab2": "^4.0.0",
     "serverless-http": "^1.5.5",
     "serverless-offline": "^3.25.4"
   },
@@ -60,6 +68,11 @@
       "npm run lint!",
       "git add"
     ]
+  },
+  "release": {
+    "npmPublish": false,
+    "tarballDir": "dist",
+    "assets": "dist/*.tgz"
   },
   "engines": {
     "node": ">=8"

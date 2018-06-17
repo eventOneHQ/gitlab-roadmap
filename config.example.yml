@@ -3,6 +3,11 @@ internal-config:
   url: https://gitlab.com # gitlab instance address
   project-id: filiosoft/roadmap # can be ID or path
   board-id: 49 # issue board ID
+  gl-app: true # enable login with GitLab?
+  gl-client-id: f135d8df73f083f632d877ffa4d5252e953255de5bd78458cbe994dbb92cc9a9 # gitlab application client id
+  gl-client-secret: 51ca773af0789f1c6afe1a8a118364cace26fa06a511227acfa9f5de0c83da13 # gitlab application client secret
+  base-url: https://roadmap.filiosoft.com # base url of roadmap
+  cookie-secret: change-me # random secret
 config:
   theme: https://bootswatch.com/4/materia/bootstrap.min.css # boostrap theme
   domain: roadmap.filiosoft.com # domain to deploy to
