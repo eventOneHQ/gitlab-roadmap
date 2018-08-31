@@ -8,7 +8,7 @@
             <ul class="list-group list-group-flush">
                 {{#each issues}}
                 <a href="{{web_url}}" class="list-group-item list-group-item-action">{{title}}
-                    <small>#{{iid}}</small>
+                    <small>#{{iid}} {{#if (eq state "closed")}}(delivered){{/if}}</small>
                 </a>
                 {{/each}} {{#if noIssues}}
                 <li class="list-group-item">No Milestones</li>
