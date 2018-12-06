@@ -27,17 +27,17 @@
   "dependencies": {
     "axios": "^0.18.0",
     "cookie-session": "^2.0.0-beta.3",
-    "cors": "^2.8.4",
-    "debug": "^3.1.0",
-    "dotenv": "^6.0.0",
-    "express": "^4.16.3",
+    "cors": "^2.8.5",
+    "debug": "^3.2.6",
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4",
     "express-handlebars": "^3.0.0",
-    "moment-timezone": "^0.5.17",
+    "moment-timezone": "^0.5.23",
     "morgan": "^1.9.1",
     "passport": "^0.4.0",
     "passport-gitlab2": "^4.0.0",
-    "serverless-http": "^1.5.5",
-    "serverless-offline": "^3.25.4"
+    "serverless-http": "^1.8.0",
+    "serverless-offline": "^3.31.3"
   },
   "devDependencies": {
     "commitizen": "^2.10.1",
@@ -45,18 +45,18 @@
     "eslint": "^4.19.1",
     "eslint-config-standard": "^11.0.0",
     "eslint-html-reporter": "^0.5.2",
-    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-node": "^6.0.1",
     "eslint-plugin-promise": "^3.8.0",
     "eslint-plugin-standard": "^3.1.0",
     "husky": "^0.14.3",
-    "lint-staged": "^7.2.0",
-    "nodemon": "^1.17.5",
-    "prettier": "^1.13.5",
-    "semantic-release": "^15.5.4",
+    "lint-staged": "^7.3.0",
+    "nodemon": "^1.18.7",
+    "prettier": "^1.15.3",
+    "semantic-release": "^15.12.4",
     "serverless": "^1.34.1",
-    "serverless-domain-manager": "^2.3.3",
-    "travis-deploy-once": "^5.0.0"
+    "serverless-domain-manager": "^2.6.6",
+    "travis-deploy-once": "^5.0.9"
   },
   "config": {
     "commitizen": {
