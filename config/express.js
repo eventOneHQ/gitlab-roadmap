@@ -29,9 +29,8 @@ module.exports = async app => {
       extname: '.hbs',
       defaultLayout: 'main',
       helpers: {
-        moment: input => {
-          return moment(input).format('MMMM Do YYYY')
-        }
+        moment: input => moment(input).format('MMMM Do YYYY'),
+        eq: (current, state) => state === current
       }
     })
   )
