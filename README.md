@@ -18,40 +18,6 @@ Click the button below to deploy on Heroku!
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Filiosoft/gitlab-roadmap)
 
-### Slower Start (AWS Lambda)
-
-If you want to deploy to AWS Lambda, follow the steps below:
-
-Clone the repository
-
-```
-$ git clone https://github.com/Filiosoft/gitlab-roadmap
-```
-
-Install the dependencies
-
-```
-$ npm install
-```
-
-Copy `config.example.yml` to `config.yml` and edit it to your liking
-
-```
-$ cp config.example.yml config.yml
-```
-
-Setup the domain (see [here](https://github.com/amplify-education/serverless-domain-manager) for more instructions)
-
-```
-$ npx sls create_domain
-```
-
-And finally, deploy
-
-```
-$ npx sls deploy
-```
-
 ### Development Setup
 
 Want to contribute? Awesome! First checkout the [contribution guidelines](#contributing) then follow these steps to get setup.

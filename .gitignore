@@ -3,8 +3,5 @@
 node_modules
 jspm_packages
 
-# Serverless directories
-.serverless
-config.yml
 .env
 public/
