@@ -1,3 +1,4 @@
+const express = require('express')
 const cors = require('cors')
 const exphbs = require('express-handlebars')
 const moment = require('moment')
@@ -8,6 +9,11 @@ const { internalConfig, config } = require('../config')()
 const axios = require('../config/axios')(internalConfig)
 
 module.exports = async app => {
+  // setup middleware
+  app.use(morgan('dev'))
+  app.use(cors())
+  app.use(express.static('public'))
+
   // set config globals
   app.locals.config = config
   app.locals.appEnabled = internalConfig.gl_app
@@ -17,11 +23,6 @@ module.exports = async app => {
   } catch (err) {
     debug(err)
   }
-
-  // setup middleware
-  app.use(morgan('dev'))
-  app.use(cors())
-
   // setup view engine
   app.engine(
     '.hbs',
