@@ -1,9 +1,8 @@
 {
   "name": "GitLab Roadmap",
-  "description":
-    "📢 Create a product roadmap website with GitLab Issue Boards as a backend!",
+  "description": "📢 Create a product roadmap website with GitLab Issue Boards as a backend!",
   "keywords": ["gitlab", "roadmap", "product"],
-  "website": "https://filiosoft.org/gitlab-roadmap",
+  "website": "https://oss.filiosoft.com/gitlab-roadmap",
   "repository": "https://github.com/filiosoft/gitlab-roadmap",
   "success_url": "/",
   "env": {
@@ -27,7 +26,7 @@
     },
     "GL_RM_INT_CONFIG_GL_APP": {
       "description": "Enable login with GitLab?",
-      "value":"false",
+      "value": "false",
       "required": false
     },
     "GL_RM_INT_CONFIG_GL_CLIENT_ID": {
@@ -44,7 +43,7 @@
     },
     "GL_RM_INT_CONFIG_COOKIE_SECRET": {
       "description": "Random secret for cookies",
-      "generator":"secret",
+      "generator": "secret",
       "required": false
     },
     "GL_RM_CONFIG_THEME": {
