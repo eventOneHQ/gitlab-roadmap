@@ -13,6 +13,7 @@ module.exports = app => {
     // cookieSession config
     app.use(
       cookieSession({
+        name: 'glrm_session',
         maxAge: 24 * 60 * 60 * 1000, // One day in milliseconds
         keys: [internalConfig.cookie_secret]
       })
