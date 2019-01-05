@@ -5,9 +5,9 @@
 - **Do not open up a GitHub issue if the bug is a security vulnerability
   in GitLab Roadmap**, and instead to refer to our [security policy](SECURITY.md).
 
-- **Ensure the bug was not already reported** by searching on GitHub under [Issues](https://github.com/Filiosoft/gitlab-roadmap/issues).
+- **Ensure the bug was not already reported** by searching on GitHub under [Issues](https://github.com/eventOneHQ/gitlab-roadmap/issues).
 
-- If you're unable to find an open issue addressing the problem, [open a new one](https://github.com/Filiosoft/gitlab-roadmap/issues/new). Be sure to include a **title and clear description**, and as much relevant information as possible.
+- If you're unable to find an open issue addressing the problem, [open a new one](https://github.com/eventOneHQ/gitlab-roadmap/issues/new). Be sure to include a **title and clear description**, and as much relevant information as possible.
 
 #### **Did you write a patch that fixes a bug?**
 
@@ -23,7 +23,7 @@
 
 #### **Do you have questions about the source code?**
 
-- Ask any question about how to use GitLab Roadmap by emailing [Noah](nprail@filiosoft.com).
+- Ask any question about how to use GitLab Roadmap by emailing [Noah](nprail@event1.io).
 
 Thanks!
 

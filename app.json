@@ -1,9 +1,10 @@
 {
   "name": "GitLab Roadmap",
-  "description": "📢 Create a product roadmap website with GitLab Issue Boards as a backend!",
+  "description":
+    "📢 Create a product roadmap website with GitLab Issue Boards as a backend!",
   "keywords": ["gitlab", "roadmap", "product"],
   "website": "https://oss.filiosoft.com/gitlab-roadmap",
-  "repository": "https://github.com/filiosoft/gitlab-roadmap",
+  "repository": "https://github.com/eventOneHQ/gitlab-roadmap",
   "success_url": "/",
   "env": {
     "GL_RM_INT_CONFIG_TOKEN": {
@@ -17,7 +18,7 @@
     },
     "GL_RM_INT_CONFIG_PROJECT_ID": {
       "description": "ID of GitLab project with roadmap issue board",
-      "value": "filiosoft/roadmap",
+      "value": "e1/roadmap",
       "required": true
     },
     "GL_RM_INT_CONFIG_BOARD_ID": {
@@ -53,7 +54,7 @@
     },
     "GL_RM_CONFIG_LINK": {
       "description": "Navbar brand link",
-      "value": "https://filiosoft.com",
+      "value": "https://geteventone.com",
       "required": false
     },
     "GL_RM_CONFIG_NAVBAR_CLASS": {
@@ -62,7 +63,7 @@
     },
     "GL_RM_CONFIG_COPYRIGHT": {
       "description": "Copyright text",
-      "value": "Copyright &copy; 2018 Filiosoft, LLC",
+      "value": "Copyright &copy; 2019 eventOne, Inc.",
       "required": false
     }
   }

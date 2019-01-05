@@ -22,7 +22,6 @@
             margin-top: 10px;
             margin-bottom: 10px;
         }
-
         /* Sticky footer styles
         -------------------------------------------------- */
 
@@ -53,10 +52,8 @@
     <header>
         <nav class="navbar navbar-expand-md {{#if config.navbar_class}}{{config.navbar_class}}{{else}}navbar-light bg-light{{/if}}">
             {{#if config.link}}
-            <a class="navbar-brand" href="{{config.link}}">{{project.name}}</a>
-            {{else}}
-            <a class="navbar-brand" href="/">{{project.name}}</a>
-            {{/if}}
+            <a class="navbar-brand" href="{{config.link}}">{{project.name}}</a> {{else}}
+            <a class="navbar-brand" href="/">{{project.name}}</a> {{/if}}
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                 aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -98,7 +95,7 @@
             </span>
             <span class="text-muted float-right">
                 ⚡ by
-                <a href="https://github.com/filiosoft/gitlab-roadmap">GitLab Roadmap</a>
+                <a href="https://github.com/eventOneHQ/gitlab-roadmap">GitLab Roadmap</a>
             </span>
         </div>
     </footer>

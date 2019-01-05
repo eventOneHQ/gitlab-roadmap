@@ -1,8 +1,8 @@
 <h1 align="center">GitLab Roadmap</h1>
 
 <p align="center">
-<a href="https://github.com/Filiosoft/gitlab-roadmap/blob/master/LICENSE"><img src="https://img.shields.io/github/license/Filiosoft/gitlab-roadmap.svg" alt="GitHub license"></a>
-<a href="https://travis-ci.com/Filiosoft/gitlab-roadmap"><img src="https://travis-ci.com/Filiosoft/gitlab-roadmap.svg?branch=develop" alt="Build Status"></a>
+<a href="https://github.com/eventOneHQ/gitlab-roadmap/blob/master/LICENSE"><img src="https://img.shields.io/github/license/eventOneHQ/gitlab-roadmap.svg" alt="GitHub license"></a>
+<a href="https://travis-ci.com/eventOneHQ/gitlab-roadmap"><img src="https://travis-ci.com/eventOneHQ/gitlab-roadmap.svg?branch=develop" alt="Build Status"></a>
 <a href="http://commitizen.github.io/cz-cli/"><img src="https://img.shields.io/badge/commitizen-friendly-brightgreen.svg" alt="Commitizen friendly"></a>
 <a href="https://standardjs.com"><img src="https://img.shields.io/badge/code_style-standard-brightgreen.svg" alt="JavaScript Style Guide"></a>
 <a href="https://github.com/semantic-release/semantic-release"><img src="https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg" alt="semantic-release"></a>
@@ -16,7 +16,7 @@
 
 Click the button below to deploy on Heroku!
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Filiosoft/gitlab-roadmap)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/eventOneHQ/gitlab-roadmap)
 
 ### Development Setup
 
@@ -25,7 +25,7 @@ Want to contribute? Awesome! First checkout the [contribution guidelines](#contr
 Clone the repository
 
 ```
-$ git clone https://github.com/Filiosoft/gitlab-roadmap
+$ git clone https://github.com/eventOneHQ/gitlab-roadmap
 ```
 
 Install the dependencies
@@ -62,18 +62,18 @@ glrm("init", { widgetRef: "glrm-widget" });
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](https://github.com/Filiosoft/gitlab-roadmap/blob/develop/CONTRIBUTING.md) for details on our [code of conduct](https://github.com/Filiosoft/gitlab-roadmap/blob/develop/CODE_OF_CONDUCT.md), and the process for submitting pull requests to us.
+Please read [CONTRIBUTING.md](https://github.com/eventOneHQ/gitlab-roadmap/blob/develop/CONTRIBUTING.md) for details on our [code of conduct](https://github.com/eventOneHQ/gitlab-roadmap/blob/develop/CODE_OF_CONDUCT.md), and the process for submitting pull requests to us.
 
 ## Versioning
 
-We use [semantic-release](https://github.com/semantic-release/semantic-release) for versioning. Every commit to `master` will generate a release. For the versions available, see the [releases on the repositories](https://github.com/Filiosoft/gitlab-roadmap/releases).
+We use [semantic-release](https://github.com/semantic-release/semantic-release) for versioning. Every commit to `master` will generate a release. For the versions available, see the [releases on the repositories](https://github.com/eventOneHQ/gitlab-roadmap/releases).
 
 ## Credits
 
 - **Noah Prail** - _Project Lead_ - [@nprail](https://github.com/nprail)
 
-See also the list of [contributors](https://github.com/Filiosoft/gitlab-roadmap/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/eventOneHQ/gitlab-roadmap/contributors) who participated in this project.
 
 ## License
 
-[MIT](https://github.com/Filiosoft/gitlab-roadmap/blob/develop/LICENSE)
+[MIT](https://github.com/eventOneHQ/gitlab-roadmap/blob/develop/LICENSE)
