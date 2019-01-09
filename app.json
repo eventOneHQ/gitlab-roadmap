@@ -1,9 +1,8 @@
 {
   "name": "GitLab Roadmap",
-  "description":
-    "📢 Create a product roadmap website with GitLab Issue Boards as a backend!",
+  "description": "📢 Create a product roadmap website with GitLab Issue Boards as a backend!",
   "keywords": ["gitlab", "roadmap", "product"],
-  "website": "https://oss.filiosoft.com/gitlab-roadmap",
+  "website": "https://oss.eventone.page/gitlab-roadmap",
   "repository": "https://github.com/eventOneHQ/gitlab-roadmap",
   "success_url": "/",
   "env": {
