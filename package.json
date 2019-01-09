@@ -1,10 +1,11 @@
 {
   "name": "gitlab-roadmap",
   "version": "0.0.0-development",
-  "description": "📢 Create a product roadmap website with GitLab Issue Boards as a backend!",
+  "description":
+    "📢 Create a product roadmap website with GitLab Issue Boards as a backend!",
   "main": "bin/www.js",
-  "repository": "Filiosoft/gitlab-roadmap",
-  "homepage": "https://filiosoft.org/gitlab-roadmap",
+  "repository": "eventOneHQ/gitlab-roadmap",
+  "homepage": "https://oss.filiosoft.com/gitlab-roadmap",
   "bin": {
     "gitlab-roadmap": "./bin/www.js"
   },
@@ -12,7 +13,8 @@
     "test": "npm run lint && npm audit || true",
     "start": "node bin/www",
     "dev": "DEBUG=glrm:* nodemon bin/www",
-    "lint": "eslint . -f node_modules/eslint-html-reporter/reporter.js -o public/eslint.html",
+    "lint":
+      "eslint . -f node_modules/eslint-html-reporter/reporter.js -o public/eslint.html",
     "lint:fix": "eslint . --fix",
     "lint!": "npm run format && npm run lint:fix",
     "format": "prettier --write 'lib/*.js' 'bin/*.js' 'config/*.js' '*.js'",
@@ -24,7 +26,7 @@
     "build-release": "webpack --config webpack.config.js --env.prod",
     "postinstall": "npm run build-release"
   },
-  "author": "Filiosoft Labs <opensource@filiosoft.com>",
+  "author": "eventOne Labs <opensource@event1.io>",
   "license": "MIT",
   "dependencies": {
     "axios": "^0.18.0",
@@ -84,10 +86,7 @@
     }
   },
   "lint-staged": {
-    "*.js": [
-      "npm run lint!",
-      "git add"
-    ]
+    "*.js": ["npm run lint!", "git add"]
   },
   "release": {
     "npmPublish": false,
