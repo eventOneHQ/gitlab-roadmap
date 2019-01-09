@@ -57,8 +57,8 @@
             {{else}}
             <a class="navbar-brand" href="/">{{project.name}}</a>
             {{/if}}
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
@@ -67,10 +67,14 @@
                     Last Updated: {{moment project.last_activity_at}}
                 </span>
                 <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="modal" data-target="#embedModal">Embed</a>
+                    </li>
+
                     {{#if appEnabled}} {{#if user}}
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
-                            aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
                             {{user.username}}
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -98,10 +102,40 @@
             </span>
             <span class="text-muted float-right">
                 ⚡ by
-                <a href="https://github.com/filiosoft/gitlab-roadmap">GitLab Roadmap</a>
+                <a href="https://github.com/eventOneHQ/gitlab-roadmap">GitLab Roadmap</a>
             </span>
         </div>
     </footer>
+
+    <div class="modal" tabindex="-1" role="dialog" id="embedModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Embed Roadmap</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <textarea>
+                        &lt;div id=&quot;glrm-widget&quot;&gt;&lt;/div&gt;
+                        <br>
+                        &lt;script&gt;
+                        (function (w,d,s,o,f,js,fjs) {
+                            w['GLRM_Widget']=o;w[o] = w[o] || function () { (w[o].q = w[o].q || []).push(arguments) };
+                            js = d.createElement(s), fjs = d.getElementsByTagName(s)[0];
+                            js.id = o; js.src = f; js.async = 1; fjs.parentNode.insertBefore(js, fjs);
+                        }(window, document, 'script', 'glrm', '{{internalConfig.base_url}}/widget.js'));
+                        glrm(&quot;init&quot;, { widgetRef: &quot;glrm-widget&quot; });
+                        &lt;/script&gt;
+                    </textarea>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

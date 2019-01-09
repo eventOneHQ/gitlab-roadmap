@@ -16,6 +16,7 @@ module.exports = async app => {
 
   // set config globals
   app.locals.config = config
+  app.locals.internalConfig = internalConfig
   app.locals.appEnabled = internalConfig.gl_app
   try {
     const projectResp = await axios.get('/')
